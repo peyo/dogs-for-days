@@ -25,8 +25,13 @@ function displayResults(responseJson) {
 function watchForm() {
   $("form").submit(event => {
     event.preventDefault();
-    getDogImage();
+    let x = document.getElementById("breedcount").value
+    if (x === "") {
+      alert("Enter a number, dog lover!");
+    } else {
+      getDogImage();
+    }
   });
 }
 
-$(watchForm());
+$(watchForm);
